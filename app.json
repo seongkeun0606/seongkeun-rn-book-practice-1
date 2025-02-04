@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sample-project",
-    "slug": "sample-project",
+    "name": "gallery-practice",
+    "slug": "gallery-practice",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sk0606.gallerypractice"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sk0606.gallerypractice"
     },
     "web": {
       "favicon": "./assets/favicon.png"
