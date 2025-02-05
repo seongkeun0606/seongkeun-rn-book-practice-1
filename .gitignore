@@ -80,3 +80,5 @@ yarn-error.*
 # Ignore the android and ios folders
 /android/
 /ios/
+
+.env
