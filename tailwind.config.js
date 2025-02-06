@@ -4,5 +4,13 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    ({ addComponents }) => {
+      addComponents({
+        '.screen-wrapper': {
+          '@apply bg-white flex-1 p-[12px]': {},
+        },
+      });
+    },
+  ],
 };

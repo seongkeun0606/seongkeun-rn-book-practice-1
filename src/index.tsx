@@ -1,8 +1,9 @@
-import { MD3LightTheme as DefaultTheme, PaperProvider, Text } from 'react-native-paper';
+import { MD3LightTheme as DefaultTheme, PaperProvider } from 'react-native-paper';
 
+import AppNavigation from './containers/navigation';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { View } from 'react-native';
 
 const theme = {
   ...DefaultTheme,
@@ -10,13 +11,13 @@ const theme = {
 
 const GlobalApp: React.FC = () => {
   return (
-    <PaperProvider theme={theme}>
-      <SafeAreaProvider>
-        <View>
-          <Text>asd</Text>
-        </View>
-      </SafeAreaProvider>
-    </PaperProvider>
+    <GestureHandlerRootView>
+      <PaperProvider theme={theme}>
+        <SafeAreaProvider>
+          <AppNavigation />
+        </SafeAreaProvider>
+      </PaperProvider>
+    </GestureHandlerRootView>
   );
 };
 
