@@ -5350,6 +5350,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"es-toolkit@npm:^1.32.0":
+  version: 1.32.0
+  resolution: "es-toolkit@npm:1.32.0"
+  dependenciesMeta:
+    "@trivago/prettier-plugin-sort-imports@4.3.0":
+      unplugged: true
+    prettier-plugin-sort-re-exports@0.0.1:
+      unplugged: true
+  checksum: 2d3c34b62cf9d3bfe64af6aa15ef57c636ef906f06dcbb7fd5540e370352f5d98091493b840c1303389e293f7bd636e60adc00ecd75fc6dbde996548d297cbf8
+  languageName: node
+  linkType: hard
+
 "escalade@npm:^3.1.1, escalade@npm:^3.2.0":
   version: 3.2.0
   resolution: "escalade@npm:3.2.0"
@@ -5948,6 +5960,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-splash-screen@npm:~0.29.21":
+  version: 0.29.21
+  resolution: "expo-splash-screen@npm:0.29.21"
+  dependencies:
+    "@expo/prebuild-config": ^8.0.25
+  peerDependencies:
+    expo: "*"
+  checksum: 7c26c80f1840cbe6a68db8d71884c424cea2b93d2516fd000957aeae62dbae50d7bbed557f5eb5a1dd52a41b6db1b78fb469e6d25b5c57d482e8cc1826f17b75
+  languageName: node
+  linkType: hard
+
 "expo-status-bar@npm:~2.0.0":
   version: 2.0.1
   resolution: "expo-status-bar@npm:2.0.1"
@@ -6450,6 +6473,7 @@ __metadata:
     "@types/react-native": ^0.73.0
     "@typescript-eslint/eslint-plugin": ^6.4.0
     "@typescript-eslint/parser": ^5.0.1
+    es-toolkit: ^1.32.0
     eslint: ^8.52.0
     eslint-config-prettier: ^9.1.0
     eslint-config-universe: ^12.0.0
@@ -6457,7 +6481,9 @@ __metadata:
     expo: ~52.0.23
     expo-camera: ~16.0.14
     expo-dev-client: ~5.0.11
+    expo-font: ~13.0.3
     expo-image-picker: ~16.0.5
+    expo-splash-screen: ~0.29.21
     expo-status-bar: ~2.0.0
     globals: ^15.14.0
     jotai: ^2.11.3
