@@ -1,5 +1,6 @@
 import { Button, Text, TextInput, useTheme } from 'react-native-paper';
-import React, { useMemo } from 'react';
+import FadeSnackbar, { FadeSnackbarActions } from '../../component/snack-bar';
+import React, { useMemo, useRef } from 'react';
 import { ScrollView, TextStyle, View } from 'react-native';
 
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -10,7 +11,7 @@ const LoginLayout: React.FC = () => {
   const theme = useTheme();
   const titleStyle = useMemo<TextStyle>(() => ({ ...theme.fonts.displaySmall, letterSpacing: -1, fontWeight: '600', color: theme.colors.primary }), []);
   const navigation = useNavigation<NativeStackNavigationProp<NavigationStack>>();
-
+  const snackbarRef = useRef<FadeSnackbarActions>(null);
   // styles
   const buttonStyle = useMemo(() => ({ borderRadius: 5 }), []);
 
@@ -40,6 +41,7 @@ const LoginLayout: React.FC = () => {
           </Button>
         </View>
       </View>
+      <FadeSnackbar ref={snackbarRef} />
     </ScrollView>
   );
 };
