@@ -8,6 +8,7 @@ import { AccountInformation } from './types';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { NavigationStack } from '../navigation/types';
 import { accountInputLengthAtom } from './store';
+import { createAccount } from '../auth/auth.service';
 import { showSnackbar } from '../../component/snack-bar/service';
 import { useNavigation } from '@react-navigation/native';
 
@@ -132,9 +133,18 @@ const SignupLayout: React.FC = () => {
                 return;
               }
 
-              navigation.goBack();
-              showSnackbar('SUCCESS', '회원가입이 완료되었습니다. 로그인해주세요');
-              resetAccountInfo();
+              createAccount(accountRef.current.email, accountRef.current.password)
+                .then(() => {
+                  showSnackbar('SUCCESS', '회원가입이 완료되었습니다. 로그인해주세요');
+                  resetAccountInfo();
+                })
+                .catch((e) => {
+                  console.log(e);
+                  showSnackbar('ERROR', `회원가입에 실패했습니다. 다시 시도해주세요 [${e.message}]`);
+                })
+                .finally(() => {
+                  navigation.goBack();
+                });
             }}
           />
         </View>

@@ -1,9 +1,7 @@
-import React, { createRef } from 'react';
-
-import { FadeSnackbarActions } from '../../component/snack-bar';
 import LoginLayout from '../login/Layout';
 import { NavigationContainer } from '@react-navigation/native';
 import { NavigationStack } from './types';
+import React from 'react';
 import SignupLayout from '../signup/Layout';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
