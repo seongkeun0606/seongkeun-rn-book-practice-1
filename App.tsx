@@ -1,6 +1,8 @@
 import GlobalApp from './src';
 import React from 'react';
 
-export default function App() {
+const App: React.FC = () => {
   return <GlobalApp />;
-}
+};
+
+export default App;

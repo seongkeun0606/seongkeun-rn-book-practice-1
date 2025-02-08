@@ -47,12 +47,7 @@
           "launchMode": "most-recent"
         }
       ],
-      [
-        "expo-font",
-        {
-          "fonts": ["./assets/fonts/Inter-Black.otf"]
-        }
-      ]
+      ["expo-font"]
     ]
   }
 }
